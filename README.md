@@ -1,6 +1,6 @@
 # Couchfugee
 
-### Help me translate!
+### Help us translate!
 Language folder is right here: https://github.com/grmmph/couchfugee/tree/master/csrw/lib/i18n
 
 If you are not familier with github workflow, you can help us translate this website with a few simple steps:
