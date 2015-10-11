@@ -1,0 +1,26 @@
+<template name="personItem">
+	<div class="person-item">
+		<div class="row">
+			<div class="two columns">
+				<img class="person-image" src="{{person.image}}" width="100" />
+			</div>
+			<div class="six columns">
+				<div class="person-name"><a href="{{person.link}}">{{person.name}}</a></div>
+				<div class="person-meta">
+					<div class="person-location"><i class="fa fa-map-marker"></i> {{person.location}}</div>
+					<div class="person-status">{{person.status}}</div>
+				</div>
+				{{#if isSearch}}
+				<div class="hide-large">
+					<a href="{{person.link}}" target="_blank"><button>Stay with {{getFirstname person.name}}</button></a>
+				</div>
+				{{/if}}
+			</div>
+			<div class="four columns text-center hide-small">
+				{{#if isSearch}}
+					<a href="{{person.link}}" target="_blank"><button>Stay with {{getFirstname person.name}}</button></a>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</template>

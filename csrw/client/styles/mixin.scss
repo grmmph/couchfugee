@@ -1,0 +1,175 @@
+
+// prefix elements
+$prefix-webkit:               true !global;
+$prefix-moz:                  true !global;
+$prefix-spec:                 true !global;
+
+/**
+ * Exports Mixin
+ * Better way of loadin moudles
+ * @param name: Moudle name
+ */
+@mixin exports($name) {
+	@if index($modules, $name) {
+	} @else {
+		$modules: append($modules, $name) !global;
+		@content;
+	}
+}
+
+/**
+ * Opacity Mixin
+ * @param opacity: Number [required]
+ * @param filter: Bolean [optional]
+ */
+@mixin opacity($opacity:50, $filter: true) {
+		opacity: $opacity / 100;
+		@if $filter {
+			filter: alpha(opacity=$opacity);
+		}
+}
+
+/**
+ * Ellipsis Mixin
+ * @param width
+ */
+ @mixin ellipsis($width: 100%) {
+	display: inline-block;
+	max-width: $width;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/**
+ * Prefixer Mixin
+ * @param property
+ * @param value
+ * @param prefixes: webkit, moz, o, spec [optional]
+ * 
+ * @example	@include prefixer($property: border-radius, $value: $value);
+ */
+ @mixin prefixer($property, $value, $prefixes: webkit moz o spec) {
+	@each $prefix in $prefixes {
+		@if $prefix != spec {
+			@if $property == border-top-left-radius and $prefix == moz {
+				@if $prefix-moz {
+					-moz-border-radius-topleft: $value;
+				}
+			} @else if $property == border-top-right-radius and $prefix == moz {
+				@if $prefix-moz {
+					-moz-border-radius-topright: $value;
+				}
+			} @else if $property == border-bottom-right-radius and $prefix == moz {
+				@if $prefix-moz {
+					-moz-border-radius-bottomright: $value;
+				}
+			} @else if $property == border-bottom-left-radius and $prefix == moz {
+				@if $prefix-moz {
+					-moz-border-radius-bottomleft: $value;
+				}
+			} @else {
+				@if $prefix == webkit {
+					@if $prefix-webkit {
+						-webkit-#{$property}: $value;
+					}
+				}
+				@if $prefix == moz {
+					@if $prefix-moz {
+						-moz-#{$property}: $value;
+					}
+				}
+				@if $prefix == o {
+					@if $prefix-moz {
+						-o-#{$property}: $value;
+					}
+				}
+			}
+		} @else {
+			@if $prefix-spec {
+				#{$property}: $value;
+			}
+		}
+	}
+}
+
+/**
+ * Prefixer Mixin
+ * @param value: Can be freeform value like 3px 3px 0 0
+ */
+@mixin radius($value) {
+	@include prefixer($property: border-radius, $value: $value);
+}
+
+/**
+ * Transition Mixin.
+ * @param value: Freeform value
+ * example: @include transition (all 2s ease-in-out);
+ *          @include transition (opacity 1s ease-in 2s, width 2s ease-out);
+ *          @include transition-property (transform, opacity);
+ */
+@mixin transition ($value...) {
+	@if length($value) >= 1 {
+		@include prefixer($property: transition, $value: $value, $prefixes: webkit moz spec);
+	} @else {
+	$value: all 0.25s ease-in 0s;
+		@include prefixer($property: transition, $value: $value, $prefixes: webkit moz spec);
+	}
+}
+
+@mixin animation ($value) {
+	@include prefixer($property: animation, $value: $value, $prefixes: webkit moz spec);
+}
+
+@mixin keyframes($animation-name) {
+	@keyframes $animation-name {
+		@content;
+	}
+	@-webkit-keyframes $animation-name {
+		@content;
+	}
+	@-moz-keyframes $animation-name {
+		@content;
+	}
+	@-ms-keyframes $animation-name {
+		@content;
+	}
+	@-o-keyframes $animation-name {
+		@content;
+	}
+}
+
+/**
+ * Box Shadow Mixin
+ * @param value: Can be free form value inset 0 1px 2px rgba(0, 0, 0, 0.125);
+ */
+@mixin box-shadow($value) {
+	@include prefixer($property: box-shadow, $value: $value, $prefixes: webkit moz spec);
+}
+
+/**
+ * Transform Mixin
+ * @param value: Can be freeform value
+ */
+@mixin transform($value) {
+	@include prefixer($property: transform, $value: $value);
+}
+
+@mixin gradient-background($direction, $color-stops...) {
+  	background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  	background: linear-gradient($direction, $color-stops);
+}
+
+@mixin select-arrow() {
+	position: absolute;
+	margin-top: -7px;
+	right: 10px;
+	top: 50%;
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	content: "\f107";
+}

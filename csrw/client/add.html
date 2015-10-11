@@ -1,0 +1,19 @@
+<template name="add">
+	<a href="/" class="close-btn"><i class="fa fa-times"></i></a>
+	{{#if isPersonAdded}}
+		<div>You profile has been added. Thank you!</div>
+		{{else}}
+		<input type="text" name="add" id="add-profile-input" class="form-control" placeholder="Type in your couchsurfing user name">
+		{{#if username}}
+			<div class="add-person-wrapper">
+				<div>Please confirm your profile</div>
+				{{ > personItem person=username}}
+				<span>Are you {{getFirstname username.name}}?</span>
+				<button id="add-confirm">Yes! Add me to the list!</button>
+			</div>
+		{{/if}}
+		{{#if personAlreadyExist}}
+		<div>Sorry, but this profile is already exist in the list!</div>
+		{{/if}}
+	{{/if}}
+</template>

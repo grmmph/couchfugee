@@ -1,0 +1,243 @@
+@import "skeleton.scss";
+
+
+body {
+	font-weight: 100;
+	font-size: 18px;
+	margin:0;
+	color: $black;
+	background-color: #F7F7F7;
+}
+
+h1 {
+	font-weight: 600;
+	margin-bottom: 0px;
+}
+.search-container {
+	max-width: 660px;
+	margin: auto;
+	margin-top: 20px;
+}
+.person-item {
+	margin: auto;
+    text-align: left;
+    margin-bottom: 10px;
+    @include radius(2px);
+    background-color: $white;
+    box-shadow: 0px 1px 1px 0px #DEDEDE;
+    opacity: 0;
+    @include animation (itemAnimation 1 0.3s ease-in forwards);
+    .two.columns {
+		width: 20%;
+	}
+    .row {
+    	width: 100%;
+    	display: table;
+    	.columns {
+    		float: none;
+    		display: table-cell;
+    		vertical-align: middle;
+    		padding-left: 4%;
+    		&.two {
+    			padding-left: 0%;
+    		}
+    	}
+    }
+    .person-image {
+    	@include radius(2px);
+    	width: 100%;
+    	margin-bottom: -6%;
+    	height: 110px;
+    	width: 110px;
+    }
+
+    .person-name {
+    	font-weight: bold;
+    	a {
+    		text-decoration: none;
+    	}
+    }
+
+    .person-meta {
+    	font-size: 0.7em;
+    	color: $gray;
+    }
+}
+
+.hero {
+	color: $white;
+	background-image: url("/images/hero.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	position: relative;
+	@include transition(all 0.4s ease-in-out);
+	min-height: 0;
+	&.has-results {
+		min-height: none;
+		height: 260px;
+    	position: relative;
+    	.search-form-group {
+    		margin-top: 0;
+    	}
+    	@media #{$small} {
+			height: 350px;
+			.search-form-group {
+				margin-top: 30px;
+			}
+    	}
+    	.subtitle {
+    		@include transition(all 0.4s ease-in-out);
+    		font-size: 1.5em;
+    		margin-bottom: 5px;
+    	}
+	}
+	&.is-small {
+		.search-form-group {
+			opacity: 0.2;
+		}
+	}
+	.header{
+		font-size: 12px;
+		font-weight: 100;
+		.nav-item {
+			padding-left: 5px;
+			text-transform: uppercase;
+			cursor: pointer;
+			opacity: 1;
+			text-decoration: none;
+			@include transition();
+			&:hover {
+				opacity: 0.8;
+			}
+			i {
+				margin-right: 5px;
+			}
+		}
+		.header-menu {
+			margin-top:10px;
+			@media #{$small} {
+				text-align: center;
+			}
+		}
+	}
+	.hero-overlay {
+		content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include opacity(90);
+        @include gradient-background(180deg, $black, transparent);
+	}
+	h1 {
+		font-weight: 100;
+		font-size: 2em;
+	}
+	.container {
+		padding-top: 10px;
+		height: 100%;
+	}
+	#search-input {
+		width: 70%;
+		max-width: 450px;
+		color: white;
+		border: 1px solid $white;
+		background-color: rgba($white, 0.40);
+		border-radius: 30px;
+		padding: 10px 15px;
+	}
+	a {
+		color: $white;
+	}
+
+	.host-note {
+		font-size: 14px;
+	    margin-top: -10px;
+	}
+	.search-form-group {
+		margin-top: 80px;
+	    width: 100%;
+	    @include transition();
+	}
+	.subtitle {
+		width: 100%;
+		font-size: 2em;
+		font-weight: 100;
+		line-height: 110%;
+		margin-bottom: 13px;
+	}
+	::-webkit-input-placeholder {
+	   color: $white;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: $white;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: $white;
+	}
+
+	:-ms-input-placeholder {
+	   color: $white;
+	}
+}
+
+.add-container {
+	background-color: rgba($white, 0.2);
+	color: $white;
+	margin: 0;
+	padding: 10px;
+	@include radius(2px);
+	@include animation (itemAnimation 1 0.3s ease-in forwards);
+	text-transform: none;
+	z-index: 99999;
+    width: 100%;
+    max-width: 360px;
+	a {
+		color: $red;
+	}
+	.close-btn {
+		position: absolute;
+		top: -10px;
+		right: -5px;
+		color: white;
+		font-size: 19px;
+	}
+	#add-profile-input {
+		width: 100%;
+		max-width: 450px;
+		color: white;
+		border: 1px solid $white;
+		background-color: rgba($white, 0.40);
+		@include radius(2px);
+		padding: 10px 15px;
+		text-transform: none;
+		margin: 0;
+	}
+	.add-person-wrapper {
+		margin-top: 10px;
+		@include animation (itemAnimation 1 0.3s ease-in forwards);
+	}
+	.person-item {
+		@include animation(none);
+		opacity: 1;
+		.person-image {
+			height: 70px;
+			width: 70px;
+		}
+	}
+}
+@include keyframes(itemAnimation) {
+	0% {
+		@include transform (translate(0px, -10px));
+		@include opacity(0);
+	}
+	100% {
+		@include opacity(100);
+		@include transform (translate(0px, 0));
+	}
+}
