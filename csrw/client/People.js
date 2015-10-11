@@ -2,7 +2,7 @@
  * People Class
  */
 
-People.lookupUsername = function (username) {
+People.lookupUsername = function (username, callback) {
 	if (People.findOne({username: username})) {
 		Session.set('People.lookupUsername.alreadyExist', true);
 		return;
@@ -15,9 +15,10 @@ People.lookupUsername = function (username) {
 			console.log(err);
 			return;
 		}
-		if (!res.name) {
+		if (!res || !res.name) {
 			res = undefined;
 		}
+		callback();
 		Session.set('People.lookupUsername.return', res);
 	});
 	return Session.get('People.lookupUsername.return');

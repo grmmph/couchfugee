@@ -14,6 +14,10 @@ Template.add.helpers({
 	},
 	personAlreadyExist: function () {
 		return Session.get('People.lookupUsername.alreadyExist');
+	},
+	isLoading: function () {
+		console.log(Session.get('Add.isLoading'))
+		return Session.get('Add.isLoading');
 	}
 });
 
@@ -23,7 +27,10 @@ Template.add.rendered = function () {
 
 Template.add.events({
 	'keyup #add-profile-input': _.debounce(function(evt) {
-		People.lookupUsername($(evt.target).val())
+		Session.set('Add.isLoading', true);
+		People.lookupUsername($(evt.target).val(), function () {
+			Session.set('Add.isLoading', false);
+		})
 	},600),
 	'click #add-confirm': function() {
 		People.addPerson(Session.get('People.lookupUsername.return'), function () {

@@ -4,6 +4,9 @@
 		<div>{{_ "add.thank-you"}}</div>
 		{{else}}
 		<input type="text" name="add" id="add-profile-input" class="form-control" placeholder="Type in your couchsurfing user name">
+		{{#if isLoading}}
+			<i class="loader fa fa-spinner fa-spin"></i>
+		{{/if}}
 		{{#if username}}
 			<div class="add-person-wrapper">
 				<div>{{_ "add.confirm-profile"}}</div>
