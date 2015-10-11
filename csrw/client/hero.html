@@ -1,6 +1,6 @@
 <template name="hero">
 
-<div class="hero {{hasResultsClass}} {{hasSmallClass}}" style="height:{{heroHeight}}">
+<div class="hero {{hasResultsClass}} {{hasSmallClass}} {{hasAddClass}}" style="height:{{heroHeight}}">
 	<div class="hero-overlay"></div>
 	<div class="container text-center">
 		<div class="header">
@@ -28,7 +28,7 @@
 		<div class="search-form-group">
 			<div class="subtitle">{{_ "hero.headline"}}</div>
 			{{_ "search.find-hosts-label"}} <input type="text" name="search" id="search-input" class="form-control" placeholder="e.g. Berlin">
-			<div class="host-note">{{_ "search.can-you"}}? <a id="add-open-btn" href="/add">{{_ "search.add-yourself"}}</a></div>
+			<div class="host-note">{{_ "search.can-you"}} <a id="add-open-btn" href="/add">{{_ "search.add-yourself"}}</a></div>
 		</div>
 	</div>
 </div>

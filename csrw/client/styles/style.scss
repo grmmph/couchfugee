@@ -16,6 +16,8 @@ h1 {
 .search-container {
 	max-width: 660px;
 	margin: auto;
+}
+.search-results-container {
 	margin-top: 20px;
 }
 .person-item {
@@ -93,7 +95,7 @@ h1 {
     		margin-bottom: 5px;
     	}
 	}
-	&.is-small {
+	&.has-add {
 		.search-form-group {
 			opacity: 0.2;
 		}

@@ -34,6 +34,12 @@ Template.hero.helpers({
 			return ''
 		}
 		return 'is-small';
+	},
+	hasAddClass: function () {
+		if (this.add) {
+			return 'has-add'
+		}
+		return '';
 	}
 });
 
