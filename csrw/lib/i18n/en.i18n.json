@@ -1,0 +1,28 @@
+{
+	"nav": {
+		"register": "Register as a host",
+		"what": "What is Couchsurfing?",
+		"contribute": "Contribute"
+	},
+	"hero": {
+		"headline": "Connecting refugees to local couchsurfing hosts"
+	},
+	"search": {
+		"find-hosts-label" :"Find hosts in",
+		"can-you": "Can you host a refugee?",
+		"add-yourself": "Add yourself to the list!"
+	},
+	"add": {
+		"thank-you": "You profile has been added. Thank you!",
+		"confirm-profile": "Please confirm your profile",
+		"are-you": "Are you %s?",
+		"add-button": "Yes! Add me to the list!",
+		"profile-exists": "Sorry, but this profile is already exist in the list!"
+	},
+	"person": {
+		"stay-button": "Stay with"
+	},
+	"results": {
+		"no-results": "Sorry, we couldn't find host in for this location."
+	}
+}

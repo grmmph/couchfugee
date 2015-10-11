@@ -12,13 +12,13 @@
 				</div>
 				{{#if isSearch}}
 				<div class="hide-large">
-					<a href="{{person.link}}" target="_blank"><button>Stay with {{getFirstname person.name}}</button></a>
+					<a href="{{person.link}}" target="_blank"><button>{{_ "person.stay-button"}} {{getFirstname person.name}}</button></a>
 				</div>
 				{{/if}}
 			</div>
 			<div class="four columns text-center hide-small">
 				{{#if isSearch}}
-					<a href="{{person.link}}" target="_blank"><button>Stay with {{getFirstname person.name}}</button></a>
+					<a href="{{person.link}}" target="_blank"><button>{{_ "person.stay-button"}} {{getFirstname person.name}}</button></a>
 				{{/if}}
 			</div>
 		</div>

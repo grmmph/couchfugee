@@ -8,14 +8,14 @@
 			<div class="row">
 				<div class="six columns text-left header-menu">
 					<div>
-						<a class="nav-item" id="nav-register" href="/add">Register as a host</a>
+						<a class="nav-item" id="nav-register" href="/add">{{_ "nav.register"}}</a>
 						<div class="add-container container {{addContainerHide}}">
 							{{> add}}
 						</div>
 					</div>
 					<!-- <div><a class='nav-item' id="nav-why" href="why">Why hosting a refugee?</a></div> -->
-					<div><a class='nav-item' id="nav-what" href="http://www.couchsurfing.com/about/about-us/" target="_blank">What is Couchsurfing?</a></div>
-					<div><a class='nav-item' id="nav-contribute" href="Contribute">Contribute</a></div>
+					<div><a class='nav-item' id="nav-what" href="http://www.couchsurfing.com/about/about-us/" target="_blank">{{_ "nav.what"}}</a></div>
+					<div><a class='nav-item' id="nav-contribute" href="https://github.com/grmmph/couchfugee">{{_ "nav.contribute"}}</a></div>
 				</div>
 
 				<div class="six columns text-right hide-small">
@@ -26,9 +26,9 @@
 			</div>
 		</div>
 		<div class="search-form-group">
-			<div class="subtitle">Connecting refugees to local couchsurfing hosts</div>
-			Find hosts in <input type="text" name="search" id="search-input" class="form-control" placeholder="e.g. Berlin">
-			<div class="host-note">Can you host a refugee? <a id="add-open-btn" href="/add">Add yourself to the list!</a></div>
+			<div class="subtitle">{{_ "hero.headline"}}</div>
+			{{_ "search.find-hosts-label"}} <input type="text" name="search" id="search-input" class="form-control" placeholder="e.g. Berlin">
+			<div class="host-note">{{_ "search.can-you"}}? <a id="add-open-btn" href="/add">{{_ "search.add-yourself"}}</a></div>
 		</div>
 	</div>
 </div>

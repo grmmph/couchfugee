@@ -5,7 +5,7 @@
 				{{> personItem person=this isSearch=true}}
 			{{/each}}
 			{{#if resultsEmpty}}
-				<div> <i class="fa fa-frown-o"></i> Sorry, we couldn't find host in for this location.</div>
+				<div> <i class="fa fa-frown-o"></i> {{_ "results.no-results"}}</div>
 			{{/if}}
 		</div>
 	</div>
