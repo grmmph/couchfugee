@@ -76,6 +76,9 @@ h1 {
 	position: relative;
 	@include transition(all 0.4s ease-in-out);
 	min-height: 0;
+	@media #{$small} {
+		background-image: url("/images/hero-small.jpg");
+	}
 	&.has-results {
 		min-height: none;
 		height: 260px;
