@@ -186,18 +186,22 @@ h1 {
 	}
 	::-webkit-input-placeholder {
 	   color: $white;
+	   text-transform: none;
 	}
 
 	:-moz-placeholder { /* Firefox 18- */
 	   color: $white;
+	   text-transform: none;
 	}
 
 	::-moz-placeholder {  /* Firefox 19+ */
 	   color: $white;
+	   text-transform: none;
 	}
 
 	:-ms-input-placeholder {
 	   color: $white;
+	   text-transform: none;
 	}
 }
 
