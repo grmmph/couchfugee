@@ -29,7 +29,11 @@ Template.add.events({
 		Session.set('Add.isLoading', true);
 		People.lookupUsername($(evt.target).val(), function () {
 			Session.set('Add.isLoading', false);
-		})
+		});
+
+		if (isMobile) {
+			$('#add-profile-input').blur();
+		}
 	},600),
 	'click #add-confirm': function() {
 		People.addPerson(Session.get('People.lookupUsername.return'), function () {

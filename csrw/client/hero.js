@@ -48,7 +48,6 @@ Template.hero.rendered = function () {
 	$(window).resize(function () {
 		Session.set('UI.heroSize', $(window).height() + 'px')
 	});
-	$('#search-input').focus();
 }
 
 Template.hero.events({
@@ -62,5 +61,8 @@ Template.hero.events({
 			return;
 		}
 		Router.go('results', {location: val});
+		if (isMobile) {
+			$('#search-input').blur();
+		}
 	}, 600)
 });
