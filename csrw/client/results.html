@@ -1,12 +1,10 @@
 <template name="results">
 	<div class="container search-container {{searchContainerHide}}">
-		<div class="search-results-container">
-			{{#each results}}
-				{{> personItem person=this isSearch=true}}
-			{{/each}}
-			{{#if resultsEmpty}}
-				<div> <i class="fa fa-frown-o"></i> {{_ "results.no-results"}}</div>
-			{{/if}}
-		</div>
+		{{#each results}}
+			{{> personItem person=this isSearch=true}}
+		{{/each}}
+		{{#if resultsEmpty}}
+			<div> <i class="fa fa-frown-o"></i> {{_ "results.no-results"}}</div>
+		{{/if}}
 	</div>
 </template>

@@ -1,11 +1,8 @@
 Template.results.helpers({
-	results: function () {
-		return Session.get('Search.results');
-	},
 	resultsEmpty: function () {
-		if (!Session.get('Search.results')) {
+		if (!this.results) {
 			return;
 		}
-		return !Session.get('Search.results').length;
+		return !this.results.length;
 	}
 });

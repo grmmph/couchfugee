@@ -14,7 +14,7 @@ Template.hero.helpers({
 		if (this.add) {
 			return Session.get('UI.heroSize');
 		}
-		if (Session.get('Search.results')) {
+		if (this.results) {
 			return;
 		}
 		return Session.get('UI.heroSize');
@@ -23,7 +23,7 @@ Template.hero.helpers({
 		if (this.add) {
 			return ''
 		}
-		if (Session.get('Search.results')) {
+		if (this.results) {
 			return 'has-results';
 		} else {
 			return '';
@@ -56,6 +56,11 @@ Template.hero.events({
 		Router.go('/');
 	},
 	'keyup #search-input' : _.debounce(function(evt) {
-		Session.set('Search.results', People.findHosts($(evt.target).val()));
+		var val = $(evt.target).val();
+		if (!val) {
+			Router.go('/');
+			return;
+		}
+		Router.go('results', {location: val});
 	}, 600)
 });

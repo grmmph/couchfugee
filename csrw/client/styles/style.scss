@@ -12,12 +12,13 @@ body {
 h1 {
 	font-weight: 600;
 	margin-bottom: 0px;
+	a {
+		text-decoration: none;
+	}
 }
 .search-container {
 	max-width: 660px;
 	margin: auto;
-}
-.search-results-container {
 	margin-top: 20px;
 }
 .person-item {
