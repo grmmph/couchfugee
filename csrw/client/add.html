@@ -14,6 +14,8 @@
 				<span>{{_ "add.are-you" username.name}}</span>
 				<button id="add-confirm">{{_ "add.add-button"}}</button>
 			</div>
+			{{else}}
+			<img class="linkshot" src="/images/linkshot.jpg">
 		{{/if}}
 		{{#if personAlreadyExist}}
 		<div>{{_ "add.profile-exists"}}</div>
