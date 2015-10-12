@@ -19,8 +19,8 @@
 				</div>
 
 				<div class="six columns text-right hide-small">
-					<span class='st_facebook_hcount' displayText='Facebook' st_url="http://couchfugee.grmmph.com"></span>
-					<span class='st_twitter_hcount' displayText='Tweet' st_url="http://couchfugee.grmmph.com"></span>
+					<span class='st_facebook_hcount' displayText='Facebook' st_title="{{_ 'hero.headline'}}" st_url="http://couchfugee.grmmph.com"></span>
+					<span class='st_twitter_hcount' displayText='Tweet' st_title="{{_ 'hero.headline'}}" st_url="http://couchfugee.grmmph.com"></span>
 					<span class='st_fblike_hcount' displayText='Facebook Like' st_url="http://couchfugee.grmmph.com"></span>
 				</div>
 			</div>
@@ -28,7 +28,7 @@
 		<div class="search-form-group">
 			<div class="subtitle">{{_ "hero.headline"}}</div>
 			<div class='search-input-wrapper'>
-				{{_ "search.find-hosts-label"}} <input type="text" name="search" id="search-input" class="form-control" placeholder="e.g. Berlin">
+				{{_ "search.find-hosts-label"}} <input type="text" name="search" id="search-input" class="form-control" placeholder="e.g. Berlin" value="{{location}}">
 			</div>
 			<div class="host-note">{{_ "search.can-you"}} <a id="add-open-btn" href="/add">{{_ "search.add-yourself"}}</a></div>
 		</div>
