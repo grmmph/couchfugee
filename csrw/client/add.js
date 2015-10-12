@@ -16,7 +16,6 @@ Template.add.helpers({
 		return Session.get('People.lookupUsername.alreadyExist');
 	},
 	isLoading: function () {
-		console.log(Session.get('Add.isLoading'))
 		return Session.get('Add.isLoading');
 	}
 });
