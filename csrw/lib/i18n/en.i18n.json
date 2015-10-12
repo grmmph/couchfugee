@@ -10,7 +10,8 @@
 	"search": {
 		"find-hosts-label" :"Find hosts in",
 		"can-you": "Can you host a refugee?",
-		"add-yourself": "Add yourself to the list!"
+		"add-yourself": "Add yourself to the list!",
+		"placeholder": "Your location (e.g. Berlin)"
 	},
 	"add": {
 		"thank-you": "You profile has been added. Thank you!",
