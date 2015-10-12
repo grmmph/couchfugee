@@ -31,6 +31,17 @@ Router.map(function() {
 	    	}
 	    }
 	});
+
+	this.route('what', {
+		path: '/what',
+	    template: 'what',
+	   	data: function () {
+	    	return {
+	    		smallHero: true
+	    	}
+	    }
+	});
+
 	this.route('why', {
 		path: '/why',
 	    template: 'why',

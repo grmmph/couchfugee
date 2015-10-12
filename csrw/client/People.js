@@ -5,6 +5,7 @@
 People.lookupUsername = function (username, callback) {
 	if (People.findOne({username: username})) {
 		Session.set('People.lookupUsername.alreadyExist', true);
+		callback();
 		return;
 	}
 
@@ -15,6 +16,7 @@ People.lookupUsername = function (username, callback) {
 			console.log(err);
 			return;
 		}
+
 		if (!res || !res.name) {
 			res = undefined;
 		}
