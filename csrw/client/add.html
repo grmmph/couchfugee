@@ -7,6 +7,16 @@
 		{{#if isLoading}}
 			<i class="loader fa fa-spinner fa-spin"></i>
 		{{/if}}
+		{{#if notFound}}
+			<div class="not-found-note">
+			<b>Cannot find profile!</b><br>
+			Please make sure your profile is public.
+			<a href="/what">More info</a>
+			</div>
+		{{/if}}
+		{{#if personAlreadyExist}}
+		<div>{{_ "add.profile-exists"}}</div>
+		{{/if}}
 		{{#if username}}
 			<div class="add-person-wrapper">
 				<div>{{_ "add.confirm-profile"}}</div>
@@ -16,9 +26,6 @@
 			</div>
 			{{else}}
 			<img class="linkshot" src="/images/linkshot.jpg">
-		{{/if}}
-		{{#if personAlreadyExist}}
-		<div>{{_ "add.profile-exists"}}</div>
 		{{/if}}
 	{{/if}}
 </template>

@@ -219,6 +219,14 @@ h1 {
 	a {
 		color: $red;
 	}
+	.not-found-note {
+		line-height: 130%;
+		margin-top: 10px;
+		@include animation (itemAnimation 1 0.3s ease-in forwards);
+		a {
+			color: $white;
+		}
+	}
 	.close-btn {
 		position: absolute;
 		top: -10px;

@@ -17,6 +17,9 @@ Template.add.helpers({
 	},
 	isLoading: function () {
 		return Session.get('Add.isLoading');
+	},
+	notFound: function () {
+		return !Session.get('People.lookupUsername.alreadyExist') && !Session.get('People.lookupUsername.return');
 	}
 });
 
