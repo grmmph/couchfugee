@@ -148,8 +148,8 @@ h1 {
 	}
 	.search-input-wrapper {
 		position: relative;
-		max-width: 530px;
 		margin: auto;
+		max-width: 620px;
 		.loader {
 			top: 0px;
 			right: 30px;
@@ -278,6 +278,9 @@ h1 {
 		margin-top: 15px;
 		margin-bottom: 0;
 	}
+}
+.hero-language-set {
+	margin-bottom: 10px;
 }
 @include keyframes(itemAnimation) {
 	0% {

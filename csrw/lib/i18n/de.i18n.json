@@ -1,0 +1,32 @@
+{
+	"nav": {
+		  "register": "Als Gastgeber registrieren",
+  		  "what": "Was ist Couchfugee?",
+	       "contribute": "Einen Beitrag leisten"
+	},
+	"hero": {
+		"headline": "Couchfugee bringt Flüchtlinge und Couchsurfing-Gastgeber zusammen"
+	},
+	"search": {
+		"find-hosts-label": "Finden Sie Gastgeber in",
+		"can-you": "Können Sie einen Flüchtling unterbringen?",
+		"add-yourself": "Tragen Sie sich in die Liste ein!",
+		"placeholder": "Ihr Standort (z.B. Berlin)"
+	},
+	"add": {
+		"thank-you": "Ihr Profil wurde hinzugefügt. Danke!",
+		"confirm-profile": "Bitte bestätigen Sie Ihr Profil.",
+		"are-you": "Sind Sie %s?",
+		"add-button": "Ja! Tragen Sie mich in die Liste ein!",
+		"profile-exists": "Sorry, aber dieses Profil existiert bereits!"
+	},
+	"person": {
+		"stay-button": "Zu Besuch sein bei"
+	},
+	"results": {
+		"no-results": "Es tut uns leid, an diesem Standort konnten wir keinen Gastgeber finden."
+	},
+	"seo": {
+		"keywords": " flüchtlinge, couchsurfing, flüchtling aufnehmen, unterkunft, flüchtlingen helfen, flüchtlingskrise, flüchtling unterbringen"
+	}
+}

@@ -64,5 +64,8 @@ Template.hero.events({
 		if (isMobile) {
 			$('#search-input').blur();
 		}
-	}, 600)
+	}, 600),
+	'click .set-lang': function (evt) {
+		TAPi18n.setLanguage($(evt.target).attr('data-lang'))
+	}
 });
