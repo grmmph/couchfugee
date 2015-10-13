@@ -3,13 +3,14 @@
  */
 
 People.lookupUsername = function (username, callback) {
+	Session.set('People.lookupUsername.notFound', false);
+	Session.set('People.lookupUsername.alreadyExist', false);
+
 	if (People.findOne({username: username})) {
 		Session.set('People.lookupUsername.alreadyExist', true);
 		callback();
 		return;
 	}
-
-	Session.set('People.lookupUsername.alreadyExist', false);
 
 	Meteor.call('lookupUsername', username, function(err, res) {
 		if(err) {
@@ -19,6 +20,7 @@ People.lookupUsername = function (username, callback) {
 
 		if (!res || !res.name) {
 			res = undefined;
+			Session.set('People.lookupUsername.notFound', true);
 		}
 		callback();
 		Session.set('People.lookupUsername.return', res);
