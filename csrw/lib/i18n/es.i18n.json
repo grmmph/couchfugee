@@ -1,0 +1,32 @@
+{
+	"nav": {
+		"register": "Registrarse como anfitrión",
+		"what": "Qué es Couchfugee?",
+		"contribute": "Contribuir"
+	},
+	"hero": {
+		"headline": "Conectando refugiados con anfitriones locales de Couchsurfing"
+	},
+	"search": {
+		"find-hosts-label" :"Encontrar anfitriones en",
+		"can-you": "Puedes dar alojamiento a un refugiado?",
+		"add-yourself": "Agrégate a la lista!",
+		"placeholder": "Tu ubicación (p.e. Berlín)"
+	},
+	"add": {
+		"thank-you": "Tu perfil ha sido agregado. Gracias!",
+		"confirm-profile": "Por favor, confirma tu perfil",
+		"are-you": "Eres %s?",
+		"add-button": "Sí! Agrégame a la lista!",
+		"profile-exists": "Lo sentimos, pero este perfil ya existe en la lista!"
+	},
+	"person": {
+		"stay-button": "Alojarse con"
+	},
+	"results": {
+		"no-results": "Lo sentimos, no pudimos encontrar anfitriones en esta ubicación."
+	},
+	"seo": {
+		"keywords": "refugiados, couchsurfing, alojar refugiados, alojamiento, ayudar refugiados, crisis de refugiados, alojar refugiado"
+	}
+}
