@@ -25,7 +25,6 @@ diff-sequence@1.0.1
 ecmascript@0.1.5
 ecmascript-collections@0.1.6
 ejson@1.0.7
-email@1.0.7
 es5-shim@4.1.13
 fastclick@1.0.7
 fortawesome:fontawesome@4.4.0
@@ -48,13 +47,10 @@ iron:url@1.0.9
 jquery@1.11.4
 launch-screen@1.0.4
 livedata@1.0.15
-localstorage@1.0.5
 logging@1.0.8
 meteor@1.1.9
 meteor-base@1.0.1
 meteorhacks:async@1.0.0
-meteorhacks:kadira@2.23.6
-meteorhacks:meteorx@1.4.1
 meteoric:ionicons-sass@0.1.7
 meteorspark:util@0.2.0
 minifiers@1.1.7
@@ -63,7 +59,6 @@ mobile-experience@1.0.1
 mobile-status-bar@1.0.6
 mongo@1.1.2
 mongo-id@1.0.1
-mongo-livedata@1.0.9
 natestrauser:animate-css@3.4.0
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
