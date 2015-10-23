@@ -16,11 +16,13 @@ h1 {
 		text-decoration: none;
 	}
 }
+
 .search-container {
 	max-width: 660px;
 	margin: auto;
 	margin-top: 20px;
 }
+
 .person-item {
 	margin: auto;
     text-align: left;
@@ -271,6 +273,8 @@ h1 {
     top: 9px;
     right: 20px;
 }
+
+.register-container,
 .what-container {
 	margin-top: 20px;
 	max-width: 660px;
@@ -279,9 +283,11 @@ h1 {
 		margin-bottom: 0;
 	}
 }
+
 .hero-language-set {
 	margin-bottom: 10px;
 }
+
 @include keyframes(itemAnimation) {
 	0% {
 		@include transform (translate(0px, -10px));

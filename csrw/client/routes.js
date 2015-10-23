@@ -32,6 +32,16 @@ Router.map(function() {
 	    }
 	});
 
+	this.route('register', {
+		path: '/register',
+	    template: 'register',
+	   	data: function () {
+	    	return {
+	    		smallHero: true
+	    	}
+	    }
+	});
+
 	this.route('what', {
 		path: '/what',
 	    template: 'what',
