@@ -1,0 +1,86 @@
+<template name="registration-info">
+  <div class="container register-container">
+
+    <h3 id="register">Registration</h3>
+
+    <h5>How can I join?</h5>
+    <p>
+      <ol>
+        <li><a href="https://www.couchsurfing.com/" target="_blank">Create a profile on Couchsurfing.com</a> if you do not already have one.</li>
+        <li><a href="#make-public">Make your profile is public</a> (this is only needed temporarily).</li>
+        <li>
+          Find your Couchsurfing <b>username</b> OR just your couchsurfing profile link:<br>
+          <div class="container">
+            <div clas="row">
+              <div class="five columns">
+                <img src="/images/linkshot.jpg" style="max-width:100%" alt="Couchsurfing username from the profile URL" />
+              </div>
+              <div class="two columns text-center">
+              Or
+              </div>
+              <div class="five columns">
+                <img src="/images/linkshot2.jpg" style="max-width:100%" alt="Couchsurfing profile URL" />
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="/add">Add your profile</a> to the Couchfugee list.</li>
+        <li>Confirm your profile was added correctly by searching for yourself on this site.</li>
+        <li>(Optional) Go back to the Couchsurfing privacy settings and re-check the option to make your profile private.</li>
+      </ol>
+    </p>
+
+
+
+    <h5 id="make-public">Make your profile public</h5>
+    This step is required so that our site can get your profile information (you can undo after adding yourself to the Couchfugee list).
+    <p>
+      How to make your profile viewable for users which are not logged in:
+      <ol>
+        <li>Go to "Account and Settings"</li>
+        <li>Click "Privacy"</li>
+        <li>
+          Uncheck "Only allow logged in members to view my profile"<br>
+          <img src="/images/privacy-settings.jpg" style="max-width:100%" alt="Privacy settings screenshot" />
+        </li>
+        <li>Save the changes</li>
+      </ol>
+    </p>
+
+    <section>
+      <h3 id="faq-and-privacy">FAQ and privacy</h3>
+
+      <h5 id="profile-info">How is my CouchSurfing profile information accessed?</h5>
+      <p>When you <a href="/add">register as a host</a>, we retrieve <a href="#what-information-is-kept">specific pieces of information</a> which you have made public on your couchsurfing.com profile.  We do not have access to any private information.  Registration cannot happen unless your profile is visible to non-members (see <a href="#register">instructions above</a>).</p>
+
+      <h5 id="what-information-is-kept">What information is kept by this site?</h5>
+      <p>
+        We store a copy of the following items:
+        <ul>
+          <li>Your name</li>
+          <li>Location of your couch</li>
+          <li>Photo</li>
+          <li>Number of CS references</li>
+        </ul>
+        All other information is ignored.
+      </p>
+
+      <h5>How is my information used?</h5>
+      <p>We list you as a host for refugees on this website.  We do not use it for marketing, spamming you, etc.</p>
+
+      <h5>Does my Couchsurfing profile need to remain public?</h5>
+      <p>No. After you have added yourself to the list, you can then make it private again.</p>
+
+      <h5>How can I change / update information that has changed after I registered?</h5>
+      <p>We are <a href="https://github.com/grmmph/couchfugee/issues/3" target="_blank">working on a feature</a> to do this.</p>
+
+      <h5>How can I remove my profile from this site?</h5>
+      <p>We are <a href="https://github.com/grmmph/couchfugee/issues/2" target="_blank">working on a feature</a> to do this.<br>
+      If you need more urgent removal, you can try sending an email to <code>grmmph</code> [at] <code>gmail</code> [dot] <code>com</code> with your account name.</p>
+
+      <p><a href="/what">Read more about Couchfugee</a></p>
+    </section>
+
+    <p>Note: This information will be updated periodically as needed.</p>
+  </div>
+</template>
